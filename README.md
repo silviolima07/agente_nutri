@@ -82,22 +82,38 @@ CrewaAI – Orquestração de Agentes
 [Pillow, Requests, etc.] – Manipulação de imagem e requisições
 
 
-### 📁  Estrutura do Projeto
+
+### 📁 Estrutura do Projeto
+
 agente_nutri/
 │
 ├── agents/
-│   └── crew_nutri.py    # Avalia os alimentos conforme o objetivo
+│ └── crew_nutri.py # Avalia os alimentos conforme o objetivo
 │
 ├── tasks/
-│   ├── image_to_text.py
-│   └── analise.py
+│ ├── image_to_text.py # Converte imagem em descrição
+│ └── analise.py # Avalia os alimentos
 │
-├── app.py                    # Interface principal com Streamlit
-├── utils/                    # Funções auxiliares
-├── examples/                 # Imagens de exemplo
+├── app.py # Interface principal com Streamlit
+├── utils/ # Funções auxiliares
+├── examples/ # Imagens de exemplo
 ├── requirements.txt
 └── README.md
 
+agente_nutri/
+│
+├── agents/
+│   └── crew_nutri.py          # Avalia os alimentos conforme o objetivo
+│
+├── tasks/
+│   ├── image_to_text.py       # Converte imagem em descrição
+│   └── analise.py             # Avalia os alimentos
+│
+├── app.py                     # Interface principal com Streamlit
+├── utils/                     # Funções auxiliares
+├── examples/                  # Imagens de exemplo
+├── requirements.txt
+└── README.md
 
 
 
