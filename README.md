@@ -60,12 +60,12 @@ cd agente_nutri
 
 ```
 ### 2. Criar ambiente virtual
-python -m venv venv
-source venv/bin/activate  # Linux/Mac
-venv\Scripts\activate     # Windows
+uv venv
+source .venv/bin/activate  # Linux/Mac
+.venv\Scripts\activate      # Windows
 
 ### 3. Instalar dependências
-pip install -r requirements.txt
+uv sync
 
 ### 4. Executar a aplicação
 streamlit run app.py
