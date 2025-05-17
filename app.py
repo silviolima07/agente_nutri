@@ -7,9 +7,10 @@ from groq import Groq
 import os
 from utils import encode_image, image_to_text, executar_crew
 
-#gpt = MyLLM.GPT4o_mini # model='gpt-4o-mini'
-#llama_mm = 'llama-3.2-11b-vision-preview' # Modelo Multi Modal para ler a imagem e descrever
-#llama_mm = 'meta-llama/llama-4-scout-17b-16e-instruct' # Modelo Multi Modal para ler a imagem e descrever
+__import__('pysqlite3')
+import sys
+
+sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
 
 #llama = MyLLM.GROQ_LLAMA # model='groq/llama-3.2-3b-preview'
 llama_mm = 'meta-llama/llama-4-scout-17b-16e-instruct'
