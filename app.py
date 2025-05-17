@@ -135,7 +135,7 @@ if option == 'Carregar Imagem':
                             resultado = executar_crew(crew_nutricao, inputs)
                            
                             #result_text = resultado.raw
-                            #st.markdown('### '+resultado, unsafe_allow_html=True)
+                            st.markdown('### '+resultado, unsafe_allow_html=True)
                             st.markdown(resultado, unsafe_allow_html=True)
                             #st.write(resultado)
                             
