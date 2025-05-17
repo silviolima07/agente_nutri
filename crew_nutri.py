@@ -29,7 +29,7 @@ class CrewNutri:
          allow_delegation=False,
          tools=[], 
          provider='litellm',
-         model=llama,
+         model='groq/llama-3.1-8b-instant' ,
          verbose=True,
          backstory=dedent("""
               Você é um especialista em nutrição com experiência em identificar comidas saudáveis ou não.
