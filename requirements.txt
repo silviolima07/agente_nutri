@@ -1,1 +1,2 @@
+crewai==0.70.0
 pysqlite3-binary
