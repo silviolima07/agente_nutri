@@ -106,9 +106,10 @@ if option == 'Carregar Imagem':
             
             temp = ', '.join(map(str, observacoes))
             st.markdown("### Considerações:")
-            st.write(' - ', temp)
+            for item in temp.split(','):
+                st.write(' - ', item)
             
-            answer = 'Resultado da Análise'
+            #answer = 'Resultado da Análise'
             st.write(" ")
 
             # Botão para iniciar o processo
@@ -135,7 +136,7 @@ if option == 'Carregar Imagem':
                             resultado = executar_crew(crew_nutricao, inputs)
                            
                             #result_text = resultado.raw
-                            st.markdown('### '+resultado, unsafe_allow_html=True)
+                            st.markdown('#### '+resultado, unsafe_allow_html=True)
                             #st.markdown(resultado, unsafe_allow_html=True)
                             #st.write(resultado)
                             
