@@ -57,3 +57,48 @@ O sistema é baseado em dois agentes:
 git clone https://github.com/seu-usuario/agente_nutri.git
 cd agente_nutri
 
+```
+### 2. Criar ambiente virtual
+python -m venv venv
+source venv/bin/activate  # Linux/Mac
+venv\Scripts\activate     # Windows
+
+### 3. Instalar dependências
+pip install -r requirements.txt
+
+### 4. Executar a aplicação
+streamlit run app.py
+
+### 🛠️ Tecnologias Utilizadas
+Python 3.11+
+
+Streamlit – Interface Web
+
+Modelo Multimodal - 'meta-llama/llama-4-scout-17b-16e-instruct'
+Modelo textual    - 'groq/llama-3.2-3b-preview'
+
+CrewaAI – Orquestração de Agentes
+
+[Pillow, Requests, etc.] – Manipulação de imagem e requisições
+
+
+### 📁  Estrutura do Projeto
+agente_nutri/
+│
+├── agents/
+│   └── crew_nutri.py    # Avalia os alimentos conforme o objetivo
+│
+├── tasks/
+│   ├── image_to_text.py
+│   └── analise.py
+│
+├── app.py                    # Interface principal com Streamlit
+├── utils/                    # Funções auxiliares
+├── examples/                 # Imagens de exemplo
+├── requirements.txt
+└── README.md
+
+
+
+
+
