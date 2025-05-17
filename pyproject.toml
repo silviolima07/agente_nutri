@@ -5,11 +5,8 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
+    "crewai>=0.86.0",
     "groq>=0.13.0",
-    "install",
-    "pip",
-    "pysqlite3",
     "python-dotenv>=1.0.1",
     "streamlit>=1.41.1",
-    "tiktoken>=0.7.0",
 ]
