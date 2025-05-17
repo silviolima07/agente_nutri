@@ -52,7 +52,7 @@ if option == 'Carregar Imagem':
     default=['Manter o peso']
     )
 
-    st.sidebar.markdown("#### Observações: ", observacoes)
+    st.sidebar.write("Observações: ", observacoes)
     
     try:
         st.markdown("## Upload Image")
@@ -105,7 +105,7 @@ if option == 'Carregar Imagem':
             st.markdown(html_page_pergunta, unsafe_allow_html=True)
             
             temp = ', '.join(map(str, observacoes))
-            st.write("Considerações:")
+            st.markdown("### Considerações:")
             st.write(' - ', temp)
             
             answer = 'Resultado da Análise'
