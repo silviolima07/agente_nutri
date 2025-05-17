@@ -105,7 +105,7 @@ if option == 'Carregar Imagem':
             st.markdown(html_page_pergunta, unsafe_allow_html=True)
             
             temp = ', '.join(map(str, observacoes))
-            st.markdown("### Considerações:")
+            st.markdown("#### Considerações:")
             for item in temp.split(','):
                 st.write(' - ', item)
             

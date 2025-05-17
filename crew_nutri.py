@@ -68,7 +68,7 @@ class CrewNutri:
              Exemplo a ser seguido:
  Na imagem, foram identificados os seguintes alimentos:
 
-** Salmão (Sashimi):**
+* **Salmão (Sashimi):**
      * ** Macronutrientes (por 100g):** Aproximadamente 20g de proteína, 0g de carboidratos, 10g de gordura (muita dos quais são omega-3).
      * ** Vitaminas:** Excelente fonte de vitamina B12, vitamina D e selenio.
      * ** Calorias:** Aproximadamente 180 kcal.
