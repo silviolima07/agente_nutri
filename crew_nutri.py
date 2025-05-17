@@ -111,8 +111,7 @@ Em contrapartida, o salmÃO e o wasabi têm qualidade nutricional significativas
         return Crew(
             agents=[nutri],
             tasks=[analise],
-            process=Process.sequential,
-            llm=CustomLLM()  # 👈 aqui também funciona
+            process=Process.sequential
         )
 
     def kickoff(self, inputs):
