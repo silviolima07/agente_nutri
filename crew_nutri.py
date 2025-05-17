@@ -66,7 +66,7 @@ class CrewNutri:
              7 - Um resumo final informando se o conjunto de alimentos descritos na imagem esta adequado as observações informadas.
              
              Exemplo a ser seguido:
- Na imagem, foram identificados os seguintes alimentos:
+ ** Na imagem, foram identificados os seguintes alimentos: **
 
 ** Salmão (Sashimi):**
      * ** Macronutrientes (por 100g):** Aproximadamente 20g de proteína, 0g de carboidratos, 10g de gordura (muita dos quais são omega-3).

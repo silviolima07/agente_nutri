@@ -52,7 +52,7 @@ if option == 'Carregar Imagem':
     default=['Manter o peso']
     )
 
-    st.sidebar.write("Observações: ", observacoes)
+    st.sidebar.markdown("#### Observações: ", observacoes)
     
     try:
         st.markdown("## Upload Image")
