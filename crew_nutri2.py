@@ -4,8 +4,11 @@ from dotenv import load_dotenv
 import streamlit as st
 from textwrap import dedent
 
+from langchain.chat_models import ChatLiteLLM
 
-from MyLLM import MyLLM
+
+
+#from MyLLM import MyLLM
 
 
 #from groq import Groq
@@ -18,7 +21,7 @@ GROQ_API_KEY = os.getenv('GROQ_API_KEY')
 
 #llama = 'groq/llama-3.1-8b-instant' # MyLLM.GROQ_LLAMA
 
-llama = MyLLM.GROQ_LLAMA # model='groq/llama-3.2-3b-preview'
+llama = ChatLiteLLM(model="groq/llama-3.1-8b-instant", api_key=os.getenv(GROQ_API_KEY))
 
 class CrewNutri:
     def __init__(self):
@@ -48,7 +51,7 @@ class CrewNutri:
         Análise os alimentos na descrição: {descricao}.
         Sempre responder em Portugues.
         Considere as seguintes observações ao realizar sua análise: {observacoes}.
-        Informar cada observação feita pelo usuário e analisar se é adequadio ou não o consumo.
+        Informar cada observação feita pelo usuário e anlisar se é adequadio ou não o consumo.
         """),
         expected_output=dedent(
         """
