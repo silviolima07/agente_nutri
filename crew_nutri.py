@@ -6,7 +6,7 @@ from llm_custom import custom_llm_completion
 from textwrap import dedent
 
 #from MyLLM import MyLLM
-from MyLLM import CustomLLM
+#from MyLLM import CustomLLM
 
 #from groq import Groq
 
@@ -17,7 +17,7 @@ from MyLLM import CustomLLM
 #GROQ_API_KEY = os.getenv('GROQ_API_KEY')
 
 # Crie uma função de fallback
-llama = CustomLLM()  # isso é um callable, mas vamos transformar em função wrapper
+#llama = CustomLLM()  # isso é um callable, mas vamos transformar em função wrapper
 
 class CrewNutri:
     def __init__(self):
