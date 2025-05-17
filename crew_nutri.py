@@ -34,7 +34,7 @@ class CrewNutri:
          goal="Identificar se alimentos na descrição  são saudáveis ou não. Sempre considere as oabservações feitas pelo usuário em sua análise.",
          allow_delegation=False,
          tools=[], 
-         llm=llama
+         llm=llama,
          verbose=True,
          backstory=dedent("""
               Você é um especialista em nutrição com experiência em identificar comidas saudáveis ou não.
