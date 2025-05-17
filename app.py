@@ -48,7 +48,7 @@ if option == 'Carregar Imagem':
     
     observacoes = st.sidebar.multiselect(
     "Observações / Objetivo",
-    ["Intolerâcia à lactose", "Alergia a amendoin", "Emagrecer", 'Manter o peso', 'Ganhar massa muscular', 'Diabetes', 'Não consome carne vermelha'],
+    ["Intolerâcia à lactose", "Alergia a amendoin", "Emagrecer", 'Manter o peso', 'Ganhar massa muscular', 'Diabetes', 'Não consome carne vermelha', 'Sedentário', 'Obeso' ],
     default=['Manter o peso']
     )
 
@@ -105,7 +105,7 @@ if option == 'Carregar Imagem':
             st.markdown(html_page_pergunta, unsafe_allow_html=True)
             
             temp = ', '.join(map(str, observacoes))
-            st.markdown("#### Considerações:")
+            st.markdown("### Considerações:")
             for item in temp.split(','):
                 st.write(' - ', item)
             
