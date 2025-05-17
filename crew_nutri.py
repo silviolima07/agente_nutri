@@ -2,7 +2,7 @@ import os
 from crewai import Agent, Task, Crew, Process
 from dotenv import load_dotenv
 import streamlit as st
-
+from llm_custom import custom_llm_completion
 from textwrap import dedent
 
 #from MyLLM import MyLLM
@@ -30,7 +30,7 @@ class CrewNutri:
          goal="Identificar se alimentos na descrição  são saudáveis ou não. Sempre considere as oabservações feitas pelo usuário em sua análise.",
          allow_delegation=False,
          tools=[], 
-         llm=CustomLLM(),
+         llm={"type": "custom", "completion_function": custom_llm_completion},
          verbose=True,
          backstory=dedent("""
               Você é um especialista em nutrição com experiência em identificar comidas saudáveis ou não.
