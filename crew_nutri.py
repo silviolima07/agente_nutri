@@ -5,7 +5,7 @@ import streamlit as st
 from llm_custom import custom_llm_completion
 from textwrap import dedent
 
-from MyLLM import MyLLM
+#from MyLLM import MyLLM
 
 
 #from groq import Groq
@@ -16,8 +16,7 @@ load_dotenv()
 # Obter a chave da API GROQ
 GROQ_API_KEY = os.getenv('GROQ_API_KEY')
 
-# Crie uma função de fallback
-llama = MyLLM.GROQ_LLAMA
+llama = 'groq/llama-3.1-8b-instant' # MyLLM.GROQ_LLAMA
 
 class CrewNutri:
     def __init__(self):
