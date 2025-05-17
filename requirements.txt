@@ -2,3 +2,7 @@ pysqlite3-binary
 pip>=23.1
 openai==1.25.0
 crewai==0.41.0 
+groq>=0.13.0,
+python-dotenv>=1.0.1"
+streamlit>=1.41.1,
+tiktoken>=0.7.0"
