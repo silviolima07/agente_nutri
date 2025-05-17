@@ -53,7 +53,7 @@ if option == 'Carregar Imagem':
     
     observacoes = st.sidebar.multiselect(
     "Observações / Objetivo",
-    ["Intolerâcia à lactose", "Alergia a amendoin", "Emagrecer", 'Manter o peso', 'Ganhar massa muscular', 'Diabete', 'Não consome carne vermelha'],
+    ["Intolerâcia à lactose", "Alergia a amendoin", "Emagrecer", 'Manter o peso', 'Ganhar massa muscular', 'Diabetes', 'Não consome carne vermelha'],
     default=['Manter o peso']
     )
 
