@@ -1,2 +1,4 @@
-crewai==0.70.0
 pysqlite3-binary
+pip>=23.1
+openai==1.25.0
+crewai==0.41.0 
