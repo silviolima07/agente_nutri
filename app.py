@@ -136,7 +136,7 @@ if option == 'Carregar Imagem':
                            
                             #result_text = resultado.raw
                             st.markdown('### '+resultado, unsafe_allow_html=True)
-                            st.markdown(resultado, unsafe_allow_html=True)
+                            #st.markdown(resultado, unsafe_allow_html=True)
                             #st.write(resultado)
                             
                             # Botão para download
