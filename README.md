@@ -2,6 +2,7 @@
 
 **Agente_Nutri** é uma aplicação Python com agentes inteligentes que analisam imagens de refeições e verificam se os alimentos identificados estão adequados ao perfil e objetivo de saúde do usuário — como emagrecimento, obesidade, sedentarismo, diabetes, entre outros.
 
+Acesse pelo link: https://agentenutri.streamlit.app/
 ---
 
 ## 🚀 Funcionalidades
@@ -100,20 +101,7 @@ agente_nutri/
 ├── requirements.txt
 └── README.md
 
-agente_nutri/
-│
-├── agents/
-│   └── crew_nutri.py          # Avalia os alimentos conforme o objetivo
-│
-├── tasks/
-│   ├── image_to_text.py       # Converte imagem em descrição
-│   └── analise.py             # Avalia os alimentos
-│
-├── app.py                     # Interface principal com Streamlit
-├── utils/                     # Funções auxiliares
-├── examples/                  # Imagens de exemplo
-├── requirements.txt
-└── README.md
+
 
 
 
