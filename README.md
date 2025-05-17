@@ -33,14 +33,14 @@ O sistema é baseado em dois agentes:
 
 1. O usuário faz o upload desta imagem:
 
-   ![Exemplo de prato](exemplo_prato.jpg)
+   ![Exemplo de prato](img/prato.png)
 
 2. O modelo identifica:
    - Arroz branco
    - Feijão preto
-   - Bife acebolado
-   - Salada com alface, tomate e cenoura
-   - Suco de laranja
+   - File de frango
+   - Salada com alface, tomate
+   - Batata
 
 3. O agente nutricionista avalia e retorna:
 
@@ -54,6 +54,6 @@ O sistema é baseado em dois agentes:
 ### 1. Clonar o repositório
 
 ```bash
-git clone https://github.com/seu-usuario/foodcheckai.git
-cd foodcheckai
+git clone https://github.com/seu-usuario/agente_nutri.git
+cd agente_nutri
 
