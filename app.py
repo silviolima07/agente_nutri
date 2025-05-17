@@ -8,7 +8,7 @@ import os
 from utils import encode_image, image_to_text, executar_crew
 
 #__import__('pysqlite3')
-#import sys
+import sys
 
 sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
 
