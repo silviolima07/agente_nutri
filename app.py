@@ -12,8 +12,6 @@ from groq import Groq
 import os
 from utils import encode_image, image_to_text, executar_crew
 
-
-
 #llama = MyLLM.GROQ_LLAMA # model='groq/llama-3.2-3b-preview'
 llama_mm = 'meta-llama/llama-4-scout-17b-16e-instruct'
 

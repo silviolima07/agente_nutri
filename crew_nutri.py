@@ -5,19 +5,19 @@ import streamlit as st
 from llm_custom import custom_llm_completion
 from textwrap import dedent
 
-#from MyLLM import MyLLM
-#from MyLLM import CustomLLM
+from MyLLM import MyLLM
+
 
 #from groq import Groq
 
 # Carregar variáveis de ambiente
-#load_dotenv()
+load_dotenv()
 
 # Obter a chave da API GROQ
-#GROQ_API_KEY = os.getenv('GROQ_API_KEY')
+GROQ_API_KEY = os.getenv('GROQ_API_KEY')
 
 # Crie uma função de fallback
-#llama = CustomLLM()  # isso é um callable, mas vamos transformar em função wrapper
+llama = MyLLM.GROQ_LLAMA
 
 class CrewNutri:
     def __init__(self):
@@ -30,7 +30,7 @@ class CrewNutri:
          goal="Identificar se alimentos na descrição  são saudáveis ou não. Sempre considere as oabservações feitas pelo usuário em sua análise.",
          allow_delegation=False,
          tools=[], 
-         llm={"type": "custom", "completion_function": custom_llm_completion},
+         llm=llama,
          verbose=True,
          backstory=dedent("""
               Você é um especialista em nutrição com experiência em identificar comidas saudáveis ou não.
