@@ -4,6 +4,10 @@ from dotenv import load_dotenv
 import streamlit as st
 from textwrap import dedent
 
+from langchain.chat_models import ChatLiteLLM
+
+
+
 #from MyLLM import MyLLM
 
 
@@ -15,7 +19,9 @@ load_dotenv()
 # Obter a chave da API GROQ
 GROQ_API_KEY = os.getenv('GROQ_API_KEY')
 
-llama = 'groq/llama-3.1-8b-instant' # MyLLM.GROQ_LLAMA
+#llama = 'groq/llama-3.1-8b-instant' # MyLLM.GROQ_LLAMA
+
+llama = ChatLiteLLM(model="groq/llama-3.1-8b-instant", api_key=os.getenv(GROQ_API_KEY))
 
 class CrewNutri:
     def __init__(self):
@@ -28,8 +34,7 @@ class CrewNutri:
          goal="Identificar se alimentos na descrição  são saudáveis ou não. Sempre considere as oabservações feitas pelo usuário em sua análise.",
          allow_delegation=False,
          tools=[], 
-         provider='litellm',
-         model='groq/llama-3.1-8b-instant' ,
+         llm=llama
          verbose=True,
          backstory=dedent("""
               Você é um especialista em nutrição com experiência em identificar comidas saudáveis ou não.

@@ -1,5 +1,0 @@
-# litellm.config.yaml
-model_list:
-  - model_name: groq/llama-3.1-8b-instant
-    litellm_provider: groq
-    api_key: ${GROQ_API_KEY}
