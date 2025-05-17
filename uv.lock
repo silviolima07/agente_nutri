@@ -567,6 +567,7 @@ dependencies = [
     { name = "groq" },
     { name = "python-dotenv" },
     { name = "streamlit" },
+    { name = "tiktoken" },
 ]
 
 [package.metadata]
@@ -575,6 +576,7 @@ requires-dist = [
     { name = "groq", specifier = ">=0.13.0" },
     { name = "python-dotenv", specifier = ">=1.0.1" },
     { name = "streamlit", specifier = ">=1.41.1" },
+    { name = "tiktoken", specifier = ">=0.7.0" },
 ]
 
 [[package]]
