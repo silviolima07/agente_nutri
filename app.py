@@ -86,7 +86,7 @@ if option == 'Carregar Imagem':
 
     Never answer describing people and children or animals.
     
-    If the image contains no food, respond only with the phrase: 'None food in image.
+    If the image contains no food, respond only with the phrase: 'Nenhum alimento ma imagem'.
     
     
 }
@@ -132,8 +132,8 @@ if option == 'Carregar Imagem':
                         # Executando a crew
                         answer_desc = "None food in image"
                         #if descricao.lower() != answer_desc.lower():
-                        if not descricao.lower().startswith('none'):        
-                            st.write("Agente Nutricionista")                           
+                        if not descricao.lower().startswith('nenhum'):        
+                            st.markdown("### Relatório do Agente Nutricionista")                           
                             resultado = executar_crew(crew_nutricao, inputs)
                            
                             #result_text = resultado.raw
