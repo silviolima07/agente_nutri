@@ -28,27 +28,27 @@ class CrewNutri:
         # Definindo os agentes
         nutri = Agent(
          role="Nutricionista",
-         goal="Identificar se alimentos na descrição  são saudáveis ou não. Sempre considere as oabservações feitas pelo usuário em sua análise.",
+         goal="Identificar se alimentos na descrição  são saudáveis ou não. Sempre considere as observações feitas pelo usuário em sua análise.",
          allow_delegation=False,
          tools=[], 
          llm=llama,
          verbose=True,
          backstory=dedent("""
-              Você é um especialista em nutrição com experiência em identificar comidas saudáveis ou não.
+              Você é um Nutricionista com 10 anos de experiência em análise de alimentos e criação de dietas personalizadas.
               Ao  analisar a descrição de alimentos considere as observações informadas pelo usuário e recomende alimentos mais saudáveis e mais adequados.
               A análise deve ser respondida em Portugues."""
      )
-     )
-
-
         # Tarefas
         analise = Task(
         name='analise_imagem',
         description= dedent("""
         Análise os alimentos na descrição: {descricao}.
         Sempre responder em Portugues.
+        Somente gere o relatório da análise se na descrição tem alimentos presentes na imagem.
         Considere as seguintes observações ao realizar sua análise: {observacoes}.
         Informar cada observação feita pelo usuário e analisar se é adequadio ou não o consumo.
+        No resumo final, sempre recomendar que o usuário consulte um médico Nutricionista para avaliar a recomendação.
+        O relatório em PDF será gerado usando uma fonte TTF com suporte a acentos e caracteres especiais.
         """),
         expected_output=dedent(
         """
@@ -57,19 +57,19 @@ class CrewNutri:
              Nomes dos alimentos em Portugues.
              Considerar as oabservações nos resultados da análise.             
              Um relatório em Portugues detalhado com:            
-             1 - Alimentos identificados na descrição;
+             1 - Alimentos identificados na descrição da imagem;
              2 - Identificar as vitaminas presentes em cada alimento;
              3 - Informar se alimento é saudável ou não;
              4-  Informar as calorias de cada alimento;
              5 - Informar qual beneficio o alimento oferece para a saúde;
              6 - Informar alternativa mais saudável para trocar pelo alimento.
-             7 - Um resumo final com titulo: Resumo Final, informando se o conjunto de alimentos descritos na imagem esta adequado as observações informadas.
-             8 - Recomendar que o usuário consulte sempre um Nutricionista antes de seguir as recomendações.
+             7 - Um resumo final informando se o conjunto de alimentos descritos na imagem esta adequado as observações informadas.
+             8 - Incluir a recomendação para que o usuário consulte um médico para avalias as sugestões.
              
              Exemplo a ser seguido:
  Na imagem, foram identificados os seguintes alimentos:
 
-* **Salmão (Sashimi):**
+** Salmão (Sashimi):**
      * ** Macronutrientes (por 100g):** Aproximadamente 20g de proteína, 0g de carboidratos, 10g de gordura (muita dos quais são omega-3).
      * ** Vitaminas:** Excelente fonte de vitamina B12, vitamina D e selenio.
      * ** Calorias:** Aproximadamente 180 kcal.
@@ -95,17 +95,17 @@ A tabela abaixo resume as observações feitas pelo usuário e como elas se apli
 
 | Observações do Usuário | Aplicação Nas Observações |
 | --- | --- |
-| Manter o peso | O salmão é uma ótima escolha devido ao seu conteúdo de proteína magra e gorduras saudáveis. |
+| Manter o peso | O salmÃO é uma ótima escolha devido ao seu conteúdo de proteína magra e gorduras saudáveis. |
 | Alergia a amendoim | Nenhum alimento encontrado na descrição refere, directamente, nutrimentos, do amendoim. O Sushi pode ser uma opção |
 | Emagrecer | O salmão nas quantidade de porto sugeridas aumenta o seu metabolismo. O wasabi também pode ajudá-lo, visto que o wasabi usa água.     |
 
-* **Resumo Final:**
+Resumo Final:
 
 Considerando as observações feitas pelo usuário, o conjunto de alimentos descritos na imagem têm quase exclusivamente alimentos saudáveis e 
 adequados à sua escolha de dieta. Embora o arroz branco para sushi seja um carboidrato simples, ele faz parte de um prato saudável e pode ser 
 consumido em moderação com base nas necessidades individuais e das atividades diárias. 
-Em contrapartida, o salmão e o wasabi têm qualidade nutricional significativas para o corpo humano na dieta.
-Consulte sempre um Nutricionista antes de seguir qualquer orientação.
+Em contrapartida, o salmÃO e o wasabi têm qualidade nutricional significativas para o corpo humano na dieta.
+Consulte sempre um médico Nutricionista para avaliar as recomendações.   
  """),
         
         agent=nutri
