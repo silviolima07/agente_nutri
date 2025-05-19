@@ -86,8 +86,7 @@ if option == 'Carregar Imagem':
 
     Never answer describing people and children or animals.
     
-    If the image contains no food, respond only with the phrase: 'None food in image.'
-    If the image contains food, respond in Portuguese.
+    If the image contains no food, respond only with the phrase: 'None food in image.
     
     
 }
@@ -132,9 +131,8 @@ if option == 'Carregar Imagem':
             
                         # Executando a crew
                         answer_desc = "None food in image"
-                        answer_desc_port  = "Nenhum alimento na imagem."
                         #if descricao.lower() != answer_desc.lower():
-                        if not descricao.lower().startswith('none') or not descricao.lower().startswith('não'):        
+                        if not descricao != answer_desc:        
                                                        
                         
                             resultado = executar_crew(crew_nutricao, inputs)
