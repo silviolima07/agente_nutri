@@ -99,7 +99,7 @@ A tabela abaixo resume as observações feitas pelo usuário e como elas se apli
 | Alergia a amendoim | Nenhum alimento encontrado na descrição refere, directamente, nutrimentos, do amendoim. O Sushi pode ser uma opção |
 | Emagrecer | O salmão nas quantidade de porto sugeridas aumenta o seu metabolismo. O wasabi também pode ajudá-lo, visto que o wasabi usa água.     |
 
-* ** Resumo Final: **
+* **Resumo Final:**
 
 Considerando as observações feitas pelo usuário, o conjunto de alimentos descritos na imagem têm quase exclusivamente alimentos saudáveis e 
 adequados à sua escolha de dieta. Embora o arroz branco para sushi seja um carboidrato simples, ele faz parte de um prato saudável e pode ser 
