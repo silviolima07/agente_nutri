@@ -151,7 +151,7 @@ if option == 'Carregar Imagem':
                                )
                         else:
                             st.markdown("### "+descricao)
-                            st.error("Carregue nova imagem")    
+                            st.info("A imagem carregada não apresenta nenhum alimento. Carregue nova imagem.")    
                         
                     except Exception as e:
                         st.error(f"Ocorreu um erro ao executar a crew: {e}")
