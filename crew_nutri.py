@@ -18,7 +18,7 @@ GROQ_API_KEY = os.getenv('GROQ_API_KEY')
 
 #llama = 'groq/llama-3.1-8b-instant' # MyLLM.GROQ_LLAMA
 
-llama = MyLLM.GROQ_LLAMA # model='groq/llama-3.2-3b-preview'
+llama = MyLLM.GROQ_DEEP_SEEK # model='groq/llama-3.2-3b-preview'
 
 class CrewNutri:
     def __init__(self):
