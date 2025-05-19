@@ -121,9 +121,9 @@ if option == 'Carregar Imagem':
                     try:
                         descricao = image_to_text(client, llama_mm, base64_image, prompt)
                         # Exibindo a descricao
-                        st.write("Descrição da imagem:")
+                        #st.write("Descrição da imagem:")
                         
-                        st.write(descricao)
+                        #st.write(descricao)
                         
                         inputs = {
                       'descricao': descricao,
@@ -133,8 +133,7 @@ if option == 'Carregar Imagem':
                         answer_desc = "None food in image"
                         #if descricao.lower() != answer_desc.lower():
                         if not descricao != answer_desc:        
-                                                       
-                        
+                            st.write("Agente Nutricionista")                           
                             resultado = executar_crew(crew_nutricao, inputs)
                            
                             #result_text = resultado.raw
