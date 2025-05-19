@@ -63,7 +63,7 @@ class CrewNutri:
              4-  Informar as calorias de cada alimento;
              5 - Informar qual beneficio o alimento oferece para a saúde;
              6 - Informar alternativa mais saudável para trocar pelo alimento.
-             7 - Um resumo final informando se o conjunto de alimentos descritos na imagem esta adequado as observações informadas.
+             7 - Um resumo final com titulo: Resumo Final, informando se o conjunto de alimentos descritos na imagem esta adequado as observações informadas.
              8 - Recomendar que o usuário consulte sempre um Nutricionista antes de seguir as recomendações.
              
              Exemplo a ser seguido:
