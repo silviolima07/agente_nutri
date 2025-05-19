@@ -28,7 +28,7 @@ class CrewNutri:
         # Definindo os agentes
         nutri = Agent(
          role="Nutricionista",
-         goal="Identificar se alimentos na descrição. Sempre considere as observações feitas pelo usuário em sua análise.",
+         goal="Identificar os alimentos na descrição. Sempre considere as observações feitas pelo usuário em sua análise.",
          allow_delegation=False,
          tools=[], 
          llm=llama,
@@ -45,8 +45,8 @@ class CrewNutri:
         Análise os alimentos na descrição: {descricao}.
         Sempre responder em Portugues.
         Somente gere o relatório da análise se na descrição tem alimentos presentes na imagem.
-        Considere as seguintes observações ao realizar sua análise: {observacoes}.
-        Informar cada observação feita pelo usuário e analisar se é adequadio ou não o consumo.
+        Considere as seguintes observações do usuário ao realizar sua análise: {observacoes}.
+        Destacar cada observação feita pelo usuário e informar se o alimento é apropriado ao consumo.
         No resumo final, sempre recomendar que o usuário consulte um médico Nutricionista para avaliar a recomendação.
         O relatório em PDF será gerado usando uma fonte TTF com suporte a acentos e caracteres especiais.
         """),
