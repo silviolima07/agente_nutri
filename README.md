@@ -71,16 +71,19 @@ uv sync
 streamlit run app.py
 
 ### 🛠️ Tecnologias Utilizadas
-Python 3.11+
+- Python 3.11+
 
-Streamlit – Interface Web
+- Streamlit – Interface Web
 
-Modelo Multimodal - 'meta-llama/llama-4-scout-17b-16e-instruct'
-Modelo textual    - 'groq/llama-3.2-3b-preview'
+- Modelos:
 
-CrewaAI – Orquestração de Agentes
+  - Modelo Multimodal / 'meta-llama/llama-4-scout-17b-16e-instruct'
 
-[Pillow, Requests, etc.] – Manipulação de imagem e requisições
+  - Modelo textual /  'groq/llama-3.2-3b-preview'
+
+- CrewaAI – Orquestração de Agentes
+
+- Libs [Pillow, Requests, etc.] – Manipulação de imagem e requisições
 
 
 
