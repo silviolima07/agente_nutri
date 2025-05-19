@@ -37,7 +37,7 @@ class CrewNutri:
               Você é um Nutricionista com 10 anos de experiência em análise de alimentos e criação de dietas personalizadas.
               Ao  analisar a descrição de alimentos considere as observações informadas pelo usuário e recomende alimentos mais saudáveis e mais adequados.
               """
-     )
+     ))
         # Tarefas
         analise = Task(
         name='analise_imagem',
