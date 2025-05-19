@@ -132,7 +132,7 @@ if option == 'Carregar Imagem':
                         # Executando a crew
                         answer_desc = "None food in image"
                         #if descricao.lower() != answer_desc.lower():
-                        if not descricao != answer_desc:        
+                        if not descricao.lower().startswith('none'):        
                             st.write("Agente Nutricionista")                           
                             resultado = executar_crew(crew_nutricao, inputs)
                            
