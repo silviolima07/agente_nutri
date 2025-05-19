@@ -87,8 +87,9 @@ if option == 'Carregar Imagem':
     Never answer describing people and children or animals.
     
     If the image contains no food, respond only with the phrase: 'Nenhum alimento ma imagem'.
-    
-    
+
+    Description in Portuguese.
+
 }
     """)
             st.write(" ")
@@ -116,7 +117,7 @@ if option == 'Carregar Imagem':
             if st.button ('Iniciar Processo ') :
                 # Quanto clicar no botão carrega um loader
                 #with st.spinner ('Wait for it...we are working...please') :
-                with st.spinner ('Processando.... análise dos alimentos e recomendação sendo gerada.') :        
+                with st.spinner ('Processando .... análise dos alimentos e recomendação sendo gerada.') :        
                     #result = crew_postagem.kickoff ( inputs ={ 'topic': tema })
                     try:
                         descricao = image_to_text(client, llama_mm, base64_image, prompt)
