@@ -87,6 +87,7 @@ if option == 'Carregar Imagem':
     Never answer describing people and children or animals.
     
     If the image contains no food, respond only with the phrase: 'None food in image.'
+    If the image contains food, respond in Portuguese.
     
     
 }
@@ -115,7 +116,8 @@ if option == 'Carregar Imagem':
             # Botão para iniciar o processo
             if st.button ('Iniciar Processo ') :
                 # Quanto clicar no botão carrega um loader
-                with st.spinner ('Wait for it...we are working...please') :
+                #with st.spinner ('Wait for it...we are working...please') :
+                with st.spinner ('Processando.... análise dos alimentos e recomendação sendo gerada.') :        
                     #result = crew_postagem.kickoff ( inputs ={ 'topic': tema })
                     try:
                         descricao = image_to_text(client, llama_mm, base64_image, prompt)
@@ -130,7 +132,9 @@ if option == 'Carregar Imagem':
             
                         # Executando a crew
                         answer_desc = "None food in image"
-                        if descricao.lower() != answer_desc.lower():
+                        answer_desc_port  = "Nenhum alimento na imagem."
+                        #if descricao.lower() != answer_desc.lower():
+                        if not descricao.lower().startswith('none') or not descricao.lower().startswith('nenhum'):        
                                                        
                         
                             resultado = executar_crew(crew_nutricao, inputs)
