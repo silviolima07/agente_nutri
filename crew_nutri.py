@@ -28,7 +28,7 @@ class CrewNutri:
         # Definindo os agentes
         nutri = Agent(
          role="Nutricionista",
-         goal="Identificar se alimentos na descrição  são saudáveis ou não. Sempre considere as observações feitas pelo usuário em sua análise.",
+         goal="Identificar se alimentos na descrição. Sempre considere as observações feitas pelo usuário em sua análise.",
          allow_delegation=False,
          tools=[], 
          llm=llama,
@@ -36,7 +36,7 @@ class CrewNutri:
          backstory=dedent("""
               Você é um Nutricionista com 10 anos de experiência em análise de alimentos e criação de dietas personalizadas.
               Ao  analisar a descrição de alimentos considere as observações informadas pelo usuário e recomende alimentos mais saudáveis e mais adequados.
-              A análise deve ser respondida em Portugues."""
+              """
      )
         # Tarefas
         analise = Task(
@@ -59,7 +59,6 @@ class CrewNutri:
              Um relatório em Portugues detalhado com:            
              1 - Alimentos identificados na descrição da imagem;
              2 - Identificar as vitaminas presentes em cada alimento;
-             3 - Informar se alimento é saudável ou não;
              4-  Informar as calorias de cada alimento;
              5 - Informar qual beneficio o alimento oferece para a saúde;
              6 - Informar alternativa mais saudável para trocar pelo alimento.
@@ -74,28 +73,25 @@ class CrewNutri:
      * ** Vitaminas:** Excelente fonte de vitamina B12, vitamina D e selenio.
      * ** Calorias:** Aproximadamente 180 kcal.
      * ** Benefícios:** Ajuda a reduzir o risco de doenças cardíacas e pode ajudar a promover a saúde do cérebro.
-     * ** Nível de Processamento:** In natura.
      * ** Observação:** Considerando a observação do usuário sobre manter o peso, o salmon é uma ótima escolha devido ao seu conteúdo de proteína magra e gorduras saudáveis.
 * **Wasabi (Vegetal):**
     * ** Macronutrientes (por 100g):** Baixo teor de carboidratos e proteínas, mas contém muita água. O teor de gordura é zero.
     * ** Vitaminas:** Excelente fonte de vitamina C e uma boa fonte de vitamina K.
     * ** Calorias:** Aproximadamente 10 kcal.
     * ** Benefícios:** Tem propriedades anti-inflamatórias e pode ajudar a aliviar problemas respiratórios.
-    * ** Nível de Processamento:** In natura.
     * ** Observação:** Considerando a observação do usuário sobre reduzir peso, o wasabi em pequenas quantidades pode ajudar a aumentar a perda de peso graças a sua capacidade de aliviar a fome.
 * **Arroz Branco para o Sushi:**
     * ** Macronutrientes (por 1 xícara cozida):** Aproximadamente 45g de carboidratos (boa parte simples).
     * ** Vitaminas:** Ricos em vitamina B1, B3, B6 e umidade.
     * ** Calorias:** Aproximadamente 200 kcal.
     * ** Benefícios:** Fornece energia rápida e pode ajudar a controlar a fome.
-    * ** Nível de Processamento:** Processado.
     * ** Alternativa Mais Saudável:** Considerando a qualidade recomendada de carboidrato simples (ou açúcar), o uso de arroz branco na dieta deve ser minimizado.
 
 A tabela abaixo resume as observações feitas pelo usuário e como elas se aplicam ao conjunto de alimentos descritos.
 
 | Observações do Usuário | Aplicação Nas Observações |
 | --- | --- |
-| Manter o peso | O salmÃO é uma ótima escolha devido ao seu conteúdo de proteína magra e gorduras saudáveis. |
+| Manter o peso | O salmãoé uma ótima escolha devido ao seu conteúdo de proteína magra e gorduras saudáveis. |
 | Alergia a amendoim | Nenhum alimento encontrado na descrição refere, directamente, nutrimentos, do amendoim. O Sushi pode ser uma opção |
 | Emagrecer | O salmão nas quantidade de porto sugeridas aumenta o seu metabolismo. O wasabi também pode ajudá-lo, visto que o wasabi usa água.     |
 
@@ -104,7 +100,7 @@ Resumo Final:
 Considerando as observações feitas pelo usuário, o conjunto de alimentos descritos na imagem têm quase exclusivamente alimentos saudáveis e 
 adequados à sua escolha de dieta. Embora o arroz branco para sushi seja um carboidrato simples, ele faz parte de um prato saudável e pode ser 
 consumido em moderação com base nas necessidades individuais e das atividades diárias. 
-Em contrapartida, o salmÃO e o wasabi têm qualidade nutricional significativas para o corpo humano na dieta.
+Em contrapartida, o salmão e o wasabi têm qualidade nutricional significativas para o corpo humano na dieta.
 Consulte sempre um médico Nutricionista para avaliar as recomendações.   
  """),
         
