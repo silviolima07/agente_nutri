@@ -64,6 +64,7 @@ class CrewNutri:
              5 - Informar qual beneficio o alimento oferece para a saúde;
              6 - Informar alternativa mais saudável para trocar pelo alimento.
              7 - Um resumo final informando se o conjunto de alimentos descritos na imagem esta adequado as observações informadas.
+             8 - Recomendar que o usuário consulte sempre um Nutricionista antes de seguir as recomendações.
              
              Exemplo a ser seguido:
  Na imagem, foram identificados os seguintes alimentos:
@@ -94,7 +95,7 @@ A tabela abaixo resume as observações feitas pelo usuário e como elas se apli
 
 | Observações do Usuário | Aplicação Nas Observações |
 | --- | --- |
-| Manter o peso | O salmÃO é uma ótima escolha devido ao seu conteúdo de proteína magra e gorduras saudáveis. |
+| Manter o peso | O salmão é uma ótima escolha devido ao seu conteúdo de proteína magra e gorduras saudáveis. |
 | Alergia a amendoim | Nenhum alimento encontrado na descrição refere, directamente, nutrimentos, do amendoim. O Sushi pode ser uma opção |
 | Emagrecer | O salmão nas quantidade de porto sugeridas aumenta o seu metabolismo. O wasabi também pode ajudá-lo, visto que o wasabi usa água.     |
 
@@ -103,7 +104,8 @@ Resumo Final:
 Considerando as observações feitas pelo usuário, o conjunto de alimentos descritos na imagem têm quase exclusivamente alimentos saudáveis e 
 adequados à sua escolha de dieta. Embora o arroz branco para sushi seja um carboidrato simples, ele faz parte de um prato saudável e pode ser 
 consumido em moderação com base nas necessidades individuais e das atividades diárias. 
-Em contrapartida, o salmÃO e o wasabi têm qualidade nutricional significativas para o corpo humano na dieta.   
+Em contrapartida, o salmão e o wasabi têm qualidade nutricional significativas para o corpo humano na dieta.
+Consulte sempre um Nutricionista antes de seguir qualquer orientação.
  """),
         
         agent=nutri
