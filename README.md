@@ -89,20 +89,9 @@ streamlit run app.py
 
 ### 📁 Estrutura do Projeto
 
-agente_nutri/
-│
-├── agents/
-│ └── crew_nutri.py # Avalia os alimentos conforme o objetivo
-│
-├── tasks/
-│ ├── image_to_text.py # Converte imagem em descrição
-│ └── analise.py # Avalia os alimentos
-│
-├── app.py # Interface principal com Streamlit
-├── utils/ # Funções auxiliares
-├── examples/ # Imagens de exemplo
-├── requirements.txt
-└── README.md
+![image](https://github.com/user-attachments/assets/c374e313-22f8-4301-952f-0d42f52e7942)
+
+
 
 
 
