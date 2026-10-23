@@ -8,7 +8,14 @@ import os
 from utils import encode_image, image_to_text, executar_crew
 
 #llama = MyLLM.GROQ_LLAMA # model='groq/llama-3.2-3b-preview'
-llama_mm = 'qwen/qwen3.8-27b'
+#llama_mm = 'qwen/qwen3.8-27b'
+from crewai import LLM
+
+llama = LLM(
+    model="groq/qwen/qwen3.8-27b",
+    max_tokens=700,
+    temperature=0.2,
+)
 
 from crew_nutri import CrewNutri
 
