@@ -27,7 +27,7 @@ def image_to_text(client, model, b64_image, prompt):
         ], 
         model=model,
         temperature=0.5,  # Controla a criatividade
-        top_p=0.9,  # Controla a diversidade das respostas
+        max_tokens=700,
    )      
   
     return result.choices[0].message.content
