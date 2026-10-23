@@ -24,7 +24,7 @@ GROQ_API_KEY = os.getenv('GROQ_API_KEY')
 from crewai import LLM
 
 llm_model = LLM(
-    model="groq/llama-3.1-8b-instant",
+    model="qwen/qwen3.8-27b",
     max_tokens=700,
     temperature=0.2,
 )
