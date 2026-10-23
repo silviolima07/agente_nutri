@@ -18,7 +18,8 @@ GROQ_API_KEY = os.getenv('GROQ_API_KEY')
 
 #llama = 'groq/llama-3.1-8b-instant' # MyLLM.GROQ_LLAMA
 
-llama = MyLLM.GROQ_LLAMA # model='groq/llama-3.2-3b-preview'
+#llama = MyLLM.GROQ_LLAMA # model='groq/llama-3.2-3b-preview'
+llm_model = "qwen/qwen3.8-27b"
 
 class CrewNutri:
     def __init__(self):
@@ -31,7 +32,7 @@ class CrewNutri:
          goal="Identificar os alimentos na descrição. Sempre considere as observações feitas pelo usuário em sua análise.",
          allow_delegation=False,
          tools=[], 
-         llm=llama,
+         llm=llm_model,
          verbose=True,
          backstory=dedent("""
               Você é um Nutricionista com 10 anos de experiência em análise de alimentos e criação de dietas personalizadas.
