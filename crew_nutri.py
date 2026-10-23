@@ -25,7 +25,7 @@ from crewai import LLM
 
 llm_model = LLM(
     model="groq/qwen/qwen3.8-27b",
-    max_tokens=700,
+    max_tokens=400,
     temperature=0.2,
 )
 
