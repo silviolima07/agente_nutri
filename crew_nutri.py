@@ -19,7 +19,15 @@ GROQ_API_KEY = os.getenv('GROQ_API_KEY')
 #llama = 'groq/llama-3.1-8b-instant' # MyLLM.GROQ_LLAMA
 
 #llama = MyLLM.GROQ_LLAMA # model='groq/llama-3.2-3b-preview'
-llm_model = "qwen/qwen3.8-27b"
+#llm_model = "qwen/qwen3.8-27b"
+
+from crewai import LLM
+
+llm_model = LLM(
+    model="groq/llama-3.1-8b-instant",
+    max_tokens=700,
+    temperature=0.2,
+)
 
 class CrewNutri:
     def __init__(self):
