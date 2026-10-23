@@ -8,7 +8,7 @@ import os
 from utils import encode_image, image_to_text, executar_crew
 
 #llama = MyLLM.GROQ_LLAMA # model='groq/llama-3.2-3b-preview'
-llama_mm = 'meta-llama/llama-prompt-guard-2-86m'
+llama_mm = 'qwen/qwen3.8-27b'
 
 from crew_nutri import CrewNutri
 
