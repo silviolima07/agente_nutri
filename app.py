@@ -11,7 +11,7 @@ from utils import encode_image, image_to_text, executar_crew
 #llama_mm = 'qwen/qwen3.8-27b'
 from crewai import LLM
 
-llama = LLM(
+llm_model = LLM(
     model="groq/qwen/qwen3.8-27b",
     max_tokens=700,
     temperature=0.2,
@@ -127,7 +127,7 @@ if option == 'Carregar Imagem':
                 with st.spinner ('Processando .... análise dos alimentos e recomendação sendo gerada.') :        
                     #result = crew_postagem.kickoff ( inputs ={ 'topic': tema })
                     try:
-                        descricao = image_to_text(client, llama_mm, base64_image, prompt)
+                        descricao = image_to_text(client, llm_model, base64_image, prompt)
                         # Exibindo a descricao
                         #st.write("Descrição da imagem:")
                         
